@@ -7,8 +7,8 @@ A fully functional e-commerce product store built with pure **HTML, CSS, and van
 ## 🔗 Links
 
 - **Live Demo:** [Add your GitHub Pages / Netlify / Vercel link here]
-- **GitHub Repository:** [Add your repo link here]
-- **Video Walkthrough:** [Add your YouTube / Google Drive link here]
+- **GitHub Repository:** [https://github.com/muqadask777-hub/ecommerce-store-muqaddas]
+- **Video Walkthrough:** [https://www.veed.io/view/66eb7a28-29f3-4d7b-a241-a6267fcde99d?source=editor&panel=share]
 
 ---
 
@@ -62,11 +62,11 @@ A fully functional e-commerce product store built with pure **HTML, CSS, and van
 - All modals scrollable and non-clipping on small screens
 
 ### Bonus Features
-- ❤️ **Wishlist** — heart icon on cards, saved to localStorage, view in Wishlist modal
-- 📦 **Load More** — shows 8 products at a time, Load More reveals next batch
-- 🆚 **Product Comparison** — select 2–3 products and compare specs side by side
-- ⌨️ **Debounced Search** — custom closure-based debounce, no library used
-- ✨ **Smooth Animations** — fade+slide-up on card load, modal scale entrance, drawer slide
+-  **Wishlist** — heart icon on cards, saved to localStorage, view in Wishlist modal
+-  **Load More** — shows 8 products at a time, Load More reveals next batch
+-  **Product Comparison** — select 2–3 products and compare specs side by side
+-  **Debounced Search** — custom closure-based debounce, no library used
+-  **Smooth Animations** — fade+slide-up on card load, modal scale entrance, drawer slide
 
 ---
 
@@ -90,7 +90,7 @@ A fully functional e-commerce product store built with pure **HTML, CSS, and van
 
 ---
 
-## 🚀 How to Run Locally
+##  How to Run Locally
 
 ```bash
 # 1. Clone the repository
@@ -110,13 +110,13 @@ No build step, no npm install needed. The project runs entirely in the browser.
 
 ---
 
-## 📚 What I Learned
+##  What I Learned
 
 Building this project taught me how to manage state across multiple JavaScript modules without a framework. The trickiest part was making search, category filter, and sort all work simultaneously — I solved this by keeping a single `applyFiltersAndRender()` function that always reads the latest state of all three filters and re-applies them together. I also learned how closures work in practice by writing my own debounce function. Handling localStorage carefully — especially preventing the flash of wrong theme on dark mode — was another important lesson in timing and browser paint cycles.
 
 ---
 
-## 📁 File Structure
+##  File Structure
 
 ```
 ecommerce-store/
