@@ -1,0 +1,33 @@
+/* ============================================================
+   dark-mode.css — ShopVault Dark Theme Overrides
+   Applied by toggling class 'dark' on <body>
+   ============================================================ */
+
+body.dark {
+  --color-bg:          #0d0d17;
+  --color-surface:     #16162a;
+  --color-surface-alt: #1f1f36;
+  --color-border:      #2e2e4a;
+  --color-primary:     #e8e8f0;
+  --color-text:        #e8e8f0;
+  --color-text-muted:  #8888aa;
+  --color-star:        #f4a532;
+  --color-accent:      #ff6b6b;
+  --color-accent-2:    #64b5d6;
+  --color-badge-bg:    #ff6b6b;
+  --color-badge-text:  #ffffff;
+}
+
+body.dark .logo              { color: #fff; }
+body.dark .hero              { background: linear-gradient(135deg, #0a0a1a 0%, #0d0d2e 100%); }
+body.dark .btn-add-cart      { background: #2a2a4a; }
+body.dark .btn-add-cart:hover{ background: #3a3a5a; }
+body.dark .modal-img-col     { border-radius: var(--radius-lg) 0 0 var(--radius-lg); }
+body.dark .checkout-title    { color: var(--color-text); }
+body.dark .compare-bar       { background: #1a1a3e; border: 1px solid var(--color-border); }
+body.dark .toast             { background: #1f1f36; border: 1px solid var(--color-border); }
+body.dark .toast.success     { background: #1b5e20; }
+body.dark .toast.error       { background: #7f0000; }
+
+/* Prevent flash of wrong theme — initial hidden body until JS applies class */
+body.theme-loading { visibility: hidden; }

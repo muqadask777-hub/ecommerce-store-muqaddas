@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopVault — E-Commerce Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/skeleton.css" />
+  <link rel="stylesheet" href="css/dark-mode.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <a href="#" class="logo">
+        <i class="fas fa-store"></i> ShopVault
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Shop</a>
+        <a href="#" class="nav-link">About</a>
+        <button class="nav-link wishlist-nav-btn" id="wishlistNavBtn">
+          <i class="fas fa-heart"></i> Wishlist
+          <span class="wishlist-count badge" id="wishlistCount" aria-hidden="true">0</span>
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge cart-badge" id="cartBadge" aria-hidden="true">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- Hero banner -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-eyebrow">New Arrivals · Free Shipping</p>
+        <h1 class="hero-title">Discover Products<br /><em>You'll Love</em></h1>
+        <p class="hero-sub">Curated picks, real reviews, unbeatable prices.</p>
+      </div>
+    </section>
+
+    <!-- Controls row -->
+    <section class="controls-row">
+      <div class="search-wrap">
+        <i class="fas fa-search search-icon"></i>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search products…"
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="sort-wrap">
+        <select id="sortSelect" class="sort-select" aria-label="Sort products">
+          <option value="default">Sort: Default</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="rating-desc">Rating: Best First</option>
+          <option value="name-asc">Name: A → Z</option>
+        </select>
+      </div>
+
+      <button class="btn-clear" id="clearFiltersBtn">
+        <i class="fas fa-xmark"></i> Clear Filters
+      </button>
+    </section>
+
+    <!-- Category filter buttons -->
+    <section class="category-bar" id="categoryBar">
+      <!-- Injected dynamically -->
+    </section>
+
+    <!-- Product count -->
+    <p class="product-count" id="productCount">Loading products…</p>
+
+    <!-- Product grid -->
+    <section class="product-grid" id="productGrid">
+      <!-- Skeleton or products injected here -->
+    </section>
+
+    <!-- Load More button (bonus) -->
+    <div class="load-more-wrap" id="loadMoreWrap" style="display:none;">
+      <button class="btn-primary" id="loadMoreBtn">
+        <i class="fas fa-chevron-down"></i> Load More
+      </button>
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty-state hidden" id="emptyState">
+      <i class="fas fa-box-open"></i>
+      <h3>No products found</h3>
+      <p>Try adjusting your search or filters.</p>
+      <button class="btn-primary" id="emptyStateReset">Reset Filters</button>
+    </div>
+
+    <!-- Error state -->
+    <div class="error-state hidden" id="errorState">
+      <i class="fas fa-triangle-exclamation"></i>
+      <h3>Could not load products</h3>
+      <p>Check your connection and try again.</p>
+      <button class="btn-primary" id="retryBtn">
+        <i class="fas fa-rotate-right"></i> Try Again
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-header">
+      <h2><i class="fas fa-cart-shopping"></i> Your Cart</h2>
+      <button class="drawer-close" id="drawerClose" aria-label="Close cart">
+        <i class="fas fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body" id="cartItems">
+      <!-- Cart items injected -->
+    </div>
+    <div class="drawer-footer" id="drawerFooter">
+      <!-- Subtotal + checkout injected -->
+    </div>
+  </aside>
+
+  <!-- ===== PRODUCT MODAL ===== -->
+  <div class="modal-overlay hidden" id="productModalOverlay">
+    <div class="modal product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHECKOUT MODAL ===== -->
+  <div class="modal-overlay hidden" id="checkoutModalOverlay">
+    <div class="modal checkout-modal" id="checkoutModal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="checkoutModalClose" aria-label="Close">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <div class="modal-body" id="checkoutModalBody">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WISHLIST MODAL ===== -->
+  <div class="modal-overlay hidden" id="wishlistModalOverlay">
+    <div class="modal wishlist-modal" id="wishlistModal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="wishlistModalClose" aria-label="Close">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <div class="modal-body" id="wishlistModalBody">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== COMPARISON MODAL ===== -->
+  <div class="modal-overlay hidden" id="compareModalOverlay">
+    <div class="modal compare-modal" id="compareModal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="compareModalClose" aria-label="Close">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <div class="modal-body" id="compareModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Compare bar -->
+  <div class="compare-bar hidden" id="compareBar">
+    <span id="compareBarText">0 items selected</span>
+    <button class="btn-primary" id="compareNowBtn" disabled>Compare Now</button>
+    <button class="btn-secondary" id="compareClearBtn">Clear</button>
+  </div>
+
+  <!-- Toast notification area -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JS files — ORDER MATTERS -->
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
