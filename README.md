@@ -6,7 +6,8 @@ A fully functional e-commerce product store built with pure **HTML, CSS, and van
 
 ## 🔗 Links
 
-- **Live Demo:** [Add your GitHub Pages / Netlify / Vercel link here]
+- **Live Demo:** [ https://muqadask777-hub.github.io/ecommerce-store-muqaddas/
+]
 - **GitHub Repository:** [https://github.com/muqadask777-hub/ecommerce-store-muqaddas]
 - **Video Walkthrough:** [https://www.veed.io/view/66eb7a28-29f3-4d7b-a241-a6267fcde99d?source=editor&panel=share]
 
