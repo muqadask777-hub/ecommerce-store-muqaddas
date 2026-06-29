@@ -73,13 +73,17 @@ A fully functional e-commerce product store built with pure **HTML, CSS, and van
 ## 🖥 Screenshots
 
 > Add at least 3 screenshots here:
-> 1. Desktop product grid<img width="628" height="430" alt="Screenshot 2026-06-29 140738" src="https://github.com/user-attachments/assets/d2c3b8f0-74f0-4f60-aace-70c01f69788f" />
+> 1. Desktop product grid
+> 2. <img width="628" height="430" alt="Screenshot 2026-06-29 140738" src="https://github.com/user-attachments/assets/d2c3b8f0-74f0-4f60-aace-70c01f69788f" />
 <img width="361" height="405" alt="Screenshot 2026-06-29 140841" src="https://github.com/user-attachments/assets/135896ff-feba-4462-bbe3-23059eb5fb0e" />
 
 
-> 2. Mobile view <img width="800" height="11728" alt="127 0 0 1_5500_" src="https://github.com/user-attachments/assets/8b2ee0b3-9ab2-4b37-8a30-16de7d40ca85" />
+> 2. Mobile view
+> 3.  <img width="800" height="11728" alt="127 0 0 1_5500_" src="https://github.com/user-attachments/assets/8b2ee0b3-9ab2-4b37-8a30-16de7d40ca85" />
  
 > 3. Cart drawer open
+> 4. <img width="769" height="427" alt="Screenshot 2026-06-29 143229" src="https://github.com/user-attachments/assets/fdebab82-08ff-4082-9357-27680f57b727" />
+
 
 ---
 
